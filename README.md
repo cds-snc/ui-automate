@@ -15,7 +15,8 @@ installation of docker.
 
 ### Environment Variables
 
-Below is a list of the Environment variable requirements to run the profiler.
+Below is a list of the Environment variable requirements to run the UI automate.
+Please considere add them to `.env` file.
 - `BROWSERSTACK_USERNAME`: Your username in browserstack
 - `BROWSERSTACK_ACCESSKEY`: Your access key in browserstack
 
