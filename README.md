@@ -20,3 +20,12 @@ Below is a list of the Environment variable requirements to run the profiler.
 - `BROWSERSTACK_ACCESSKEY`: Your access key in browserstack
 
 To get the browser stack credentials see your [BrowserStack Account Settings](https://www.browserstack.com/accounts/settings)
+
+### Setup
+* Clone the repo
+* Install dependencies `npm install`
+* Update `*.conf.js` files inside the `conf/` directory with your BS Username and Access Key
+
+### Running your tests
+* To run a single test, run `npm run single`
+* To run local tests, run `npm run local`
