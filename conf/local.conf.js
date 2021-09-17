@@ -5,7 +5,8 @@ exports.config = {
   
     capabilities: [{
       browserName: 'chrome',
-      name: "single_test",
-      build: "GC Forms - Formulaires GC UI-Automate"
+      name: "local_test",
+      build: "GC Forms - Formulaires GC UI-Automate",
+      'browserstack.local': true
     }]
   }
