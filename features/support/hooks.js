@@ -1,5 +1,5 @@
 'use strict';
-
+require('dotenv').config();
 const webdriver = require('selenium-webdriver');
 const browserstack = require('browserstack-local');
 
@@ -8,7 +8,7 @@ const config = require(config_file).config;
 
 const username = process.env.BROWSERSTACK_USERNAME || config.user;
 const accessKey = process.env.BROWSERSTACK_ACCESS_KEY || config.key;
-//BsSession
+//Bs Session
 const createBrowserStackSession = function(config, caps){
   return new webdriver.Builder().
     usingServer('http://'+config.server+'/wd/hub').
@@ -17,7 +17,7 @@ const createBrowserStackSession = function(config, caps){
 }
 
 const myHooks = function () {
-  const bs_local = null;
+  let bs_local = null;
 
   this.Before(function (scenario, callback) {
     const world = this;
@@ -27,7 +27,6 @@ const myHooks = function () {
     caps['browserstack.key'] = accessKey;
 
     if(caps["browserstack.local"]){
-      // Code to start browserstack local before start of test and stop browserstack local after end of test
       bs_local = new browserstack.Local();
       bs_local.start({'key': accessKey }, function(error) {
         if (error) return console.log(error.red);

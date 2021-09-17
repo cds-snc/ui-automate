@@ -6,7 +6,7 @@ const webdriver = require('selenium-webdriver');
 module.exports = function() {
 
   this.When(/^I open health check$/, function (next) {
-    this.driver.get('http://bs-local.com:45691/check');
+    this.driver.get('http://myip:40091/check');
     next();
   });
 
