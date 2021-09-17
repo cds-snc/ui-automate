@@ -1,7 +1,7 @@
 {
     "name": "ui-automate",
     "version": "0.0.1",
-    "description": " Cross-browser testing tool with Selenium webdriver",
+    "description": " GC Form ui-Automate - Cross-browser testing with Selenium webdriver",
     "scripts": {
       "test": "npm run single && npm run local && npm run parallel",
       "single": "cross-env CONFIG_FILE=single ./node_modules/cucumber/bin/cucumber.js features/single.feature",
